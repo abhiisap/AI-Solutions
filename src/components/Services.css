@@ -1,0 +1,80 @@
+.services-container {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+  font-family: "Arial", sans-serif;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.services-grid, .testimonials-grid, .showcase-grid, .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexibly sized columns */
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+.service-card, .testimonial-card, .showcase-item, .faq-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover, .testimonial-card:hover, .showcase-item:hover, .faq-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon, .testimonial-icon, .showcase-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+h3, .service-title, .testimonial-name, .showcase-item h3, .faq-item h4 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+p, .service-description, .testimonial-feedback, .showcase-item p, .faq-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.testimonials-section h2, .showcase-section h2, .faq-section h2, .expertise-section h2, .cta-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.learn-more-btn, .cta-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.learn-more-btn:hover, .cta-btn:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .services-grid, .testimonials-grid, .showcase-grid, .faq-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mobile responsive grid */
+  }
+}

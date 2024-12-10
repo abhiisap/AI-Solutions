@@ -1,0 +1,99 @@
+/* Dashboard.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard-header {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  min-width: 700px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background-color: #4CAF50;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #4CAF50;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #e1f5e1; /* Lighter hover effect */
+  cursor: pointer;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 18px;
+  color: #ff4d4d; /* Red to make it more noticeable */
+  padding: 20px 0;
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #ff4d4d; /* Red for error message */
+}
+
+@media (max-width: 768px) {
+  .styled-table th,
+  .styled-table td {
+      padding: 8px 10px;
+  }
+
+  .dashboard-header {
+      font-size: 24px;
+  }
+}

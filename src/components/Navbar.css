@@ -1,0 +1,90 @@
+/* Navbar.css */
+
+/* General Navbar Styles */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Navbar Menu List Styles */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li {
+  margin-right: 20px;
+}
+
+.navbar-list li:last-child {
+  margin-right: 0;
+}
+
+.navbar-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Hover and Active Link States */
+.navbar-list a:hover,
+.active-link {
+  color: #4CAF50; /* Highlight color */
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hide menu on small screens by default */
+  .navbar-list {
+      display: none;
+      width: 100%;
+      justify-content: space-evenly;
+  }
+
+  /* Display menu in dropdown style when open */
+  .navbar.open .navbar-list {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 10px 0;
+  }
+
+  /* Center menu items */
+  .navbar.open .navbar-list li {
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  .navbar-list li a {
+      font-size: 20px;
+  }
+
+  /* Hamburger Icon for Mobile */
+  .navbar-toggle {
+      display: block;
+      cursor: pointer;
+  }
+}
+
+/* Hamburger Icon (Hidden by Default) */
+.navbar-toggle {
+  display: none;
+}
